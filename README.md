@@ -45,7 +45,7 @@ You can view the live demonstration of this template here before downloading:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/neo-brutalism-portfolio.git
+   git clone https://github.com/Athernaa/neo-brutalism-portfolio.git
    cd neo-brutalism-portfolio
    ```
 
