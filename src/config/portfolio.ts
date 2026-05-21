@@ -228,7 +228,7 @@ export const projects = [
   {
     id: 3,
     num: "03",
-    title: "Subterra & Kerta Arena",
+    title: "Subterra",
     year: "2024",
     status: "Live",
     description:
