@@ -15,7 +15,7 @@ Designed around the **Neo-Brutalist** aesthetic, this template features stark co
 ## 🚀 Live Demo
 
 You can view the live demonstration of this template here before downloading:
-👉 **[View Live Demo on Vercel](https://your-vercel-deployment-link.vercel.app)** *(Replace this with your actual vercel link after deployment)*
+👉 **[View Live Demo on Vercel](https://neo-brutalism-portfolio-rho.vercel.app/)**
 
 ---
 
