@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f4f4f0;
+  --foreground: #000000;
+  
+  --accent-yellow: #ffe900;
+  --accent-cyan: #00e5ff;
+  --accent-pink: #ff0099;
+  --accent-lime: #ccff00;
+
+  --text-on-yellow: #000000;
+  --text-on-cyan: #000000;
+  --text-on-pink: #ffffff;
+  --text-on-lime: #000000;
+
+  --hover-primary-bg: #000000;
+  --hover-primary-text: #f4f4f0;
+  --hover-secondary-bg: #ffffff;
+  --hover-secondary-text: #000000;
+  
+  --hover-yellow: #e6d200;
+  --hover-cyan: #00cce6;
+  --hover-pink: #e6008a;
+  --hover-lime: #b8e600;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #f4f4f0;
+
+  --accent-yellow: #807500;
+  --accent-cyan: #006b77;
+  --accent-pink: #99005c;
+  --accent-lime: #6b8000;
+
+  --text-on-yellow: #f4f4f0;
+  --text-on-cyan: #f4f4f0;
+  --text-on-pink: #f4f4f0;
+  --text-on-lime: #f4f4f0;
+
+  --hover-primary-bg: #f4f4f0;
+  --hover-primary-text: #111111;
+  --hover-secondary-bg: #222222;
+  --hover-secondary-text: #f4f4f0;
+
+  --hover-yellow: #665e00;
+  --hover-cyan: #00565f;
+  --hover-pink: #7a0049;
+  --hover-lime: #566600;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-lime: var(--accent-lime);
+
+  --color-text-on-yellow: var(--text-on-yellow);
+  --color-text-on-cyan: var(--text-on-cyan);
+  --color-text-on-pink: var(--text-on-pink);
+  --color-text-on-lime: var(--text-on-lime);
+
+  --color-hover-primary-bg: var(--hover-primary-bg);
+  --color-hover-primary-text: var(--hover-primary-text);
+  --color-hover-secondary-bg: var(--hover-secondary-bg);
+  --color-hover-secondary-text: var(--hover-secondary-text);
+  
+  --color-hover-yellow: var(--hover-yellow);
+  --color-hover-cyan: var(--hover-cyan);
+  --color-hover-pink: var(--hover-pink);
+  --color-hover-lime: var(--hover-lime);
+
+  --color-brutal-white: #f4f4f0;
+  --color-brutal-black: #000000;
+  --font-sans: var(--font-space-grotesk);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility brutal-shadow {
+  box-shadow: 6px 6px 0px 0px var(--color-foreground);
+}
+
+@utility brutal-shadow-sm {
+  box-shadow: 4px 4px 0px 0px var(--color-foreground);
+}
+
+@utility brutal-shadow-lg {
+  box-shadow: 8px 8px 0px 0px var(--color-foreground);
+}
+
+@utility brutal-shadow-xl {
+  box-shadow: 12px 12px 0px 0px var(--color-foreground);
+}
+
+@utility brutal-border {
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--color-foreground);
+}
+
+@utility brutal-border-2 {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-foreground);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
+  scrollbar-color: var(--accent-yellow) var(--background);
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Brutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-left: 3px solid var(--foreground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-yellow);
+  border: 3px solid var(--foreground);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-pink);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
 }
